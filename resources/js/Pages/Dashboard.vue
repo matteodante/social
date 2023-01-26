@@ -8,5 +8,7 @@ import HomeLayout from '@/Layouts/HomeLayout.vue';
     <HomeLayout title="Dashboard">
 
 
+
+
     </HomeLayout>
 </template>
