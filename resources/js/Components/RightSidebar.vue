@@ -14,12 +14,14 @@ import WhoToFollowWidget from '@/Components/WhoToFollowWidget.vue';
 
 
 
-    <div class="max-w-sm rounded-lg bg-black overflow-hidden shadow-lg m-4 mr-20">
-        <WhoToFollowWidget />
+    <div class="max-w-sm rounded-lg  bg-gray-900 overflow-hidden shadow-lg m-4 mr-20">
+        <div class="mx-5">
+            <WhoToFollowWidget />
+        </div>
     </div>
 
 
-    <div class="max-w-sm rounded-lg bg-black border-0  overflow-hidden m-4 mr-20">
+    <div class="max-w-sm rounded-lg bg-gray-900 border-0  overflow-hidden m-4 mr-20">
         <TrendingWidget />
     </div>
 

@@ -9,7 +9,7 @@ const { name, username, pic } = defineProps({
 </script>
 
 <template>
-    <div class="block relative rounded-lg max-w-xs flex-shrink-0 transition-transform antialiased mb-5">
+    <div class="block relative rounded-lg flex-shrink-0 transition-transform antialiased mb-5">
 
         <div class="h-28 p-4 w-auto mb-4 relative block rounded-lg overflow-hidden">
             <Link :href="route('dashboard')">
