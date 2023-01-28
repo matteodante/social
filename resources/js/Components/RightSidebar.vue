@@ -2,6 +2,7 @@
 import SearchBar from '@/Components/SearchBar.vue';
 import TrendingWidget from '@/Components/TrendingWidget.vue';
 import WhoToFollowWidget from '@/Components/WhoToFollowWidget.vue';
+
 </script>
 
 <template>

@@ -49,7 +49,7 @@ onMounted(() => {
         <!-- MAIN LG -->
         <div class="flex">
 
-            <div class="w-2/5 text-white pl-32 py-4 h-auto hidden lg:block">
+            <div class="w-2/5 text-white pl-32 py-4 h-screen sticky top-0 hidden lg:block overflow-hidden">
                 <LeftSidebar />
             </div>
 
