@@ -3,6 +3,7 @@ import AppLayout from '@/Layouts/AppLayout.vue';
 import Timeline from '@/Components/Timeline.vue';
 import HomeLayout from '@/Layouts/HomeLayout.vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
+import { PlusIcon } from '@heroicons/vue/24/outline'
 </script>
 
 <template>
@@ -26,6 +27,7 @@ import PrimaryButton from '@/Components/PrimaryButton.vue';
                 </a>
             </div>
         </div>
+
 
         <hr class="border-gray-600">
         <!--middle creat tweet-->
@@ -86,9 +88,11 @@ import PrimaryButton from '@/Components/PrimaryButton.vue';
             </div>
 
             <div class="flex-1">
-                <PrimaryButton
-                    class="bg-light-400 mt-5 hover:bg-light-600 text-white font-bold py-2 px-8 rounded-full mr-8 float-right">
-                    Tweet
+                <PrimaryButton class="float-right mr-8 w-32">
+                    <span class="absolute left-2 top-1/2 translate-y-1/2">
+                        <PlusIcon />
+                    </span>
+                    <span>Post</span>
                 </PrimaryButton>
             </div>
         </div>

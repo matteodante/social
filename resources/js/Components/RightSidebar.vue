@@ -15,9 +15,7 @@ import WhoToFollowWidget from '@/Components/WhoToFollowWidget.vue';
 
 
     <div class="max-w-sm rounded-lg  bg-gray-900 overflow-hidden shadow-lg m-4 mr-20">
-        <div class="mx-5">
-            <WhoToFollowWidget />
-        </div>
+        <WhoToFollowWidget />
     </div>
 
 

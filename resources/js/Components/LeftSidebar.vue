@@ -6,6 +6,7 @@ import { ref } from 'vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 import SidebarLink from '@/Components/SidebarLink.vue';
 import SidebarAvatar from '@/Components/SidebarAvatar.vue';
+import { PlusIcon } from '@heroicons/vue/24/outline'
 
 </script>
 
@@ -92,8 +93,9 @@ import SidebarAvatar from '@/Components/SidebarAvatar.vue';
         </SidebarLink>
 
 
-        <PrimaryButton>
-            Tweet
+        <PrimaryButton class="flex items-center px-2 py-2 w-48 text-xl hover:bg-gray-900 mb-3">
+            <PlusIcon class="mr-4 h-8 w-8" />
+            <span>New Post</span>
         </PrimaryButton>
     </nav>
 
