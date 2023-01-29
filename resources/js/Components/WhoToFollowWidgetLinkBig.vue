@@ -30,11 +30,13 @@ const { name, username, pic } = defineProps({
                 </div>
                 <div class="flex flex-row items-center max-w-full justify-start">
                     <div class="min-w-0 block text-white">
-                        <div class="text-lg leading-4 text-white block overflow-hidden relative pr-5 font-semibold ">
-                            <span class="font-sans">{{ name }}</span>
+                        <div
+                            class="text-lg leading-4 text-white block overflow-hidden relative pr-5 font-semibold font-sans">
+                            {{ name }}
                         </div>
-                        <div class="text-sm text-white m-0 overflow-hidden relative font-light justify-start">
-                            <span class="font-sans italic">@{{ username }}</span>
+                        <div
+                            class="text-sm text-white m-0 overflow-hidden relative font-light justify-start font-sans italic">
+                            @{{ username }}
                         </div>
                     </div>
                 </div>
