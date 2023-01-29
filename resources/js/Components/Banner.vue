@@ -14,16 +14,17 @@ watch(message, async () => {
 const accept = () => {
     show.value = false;
 }
+
 </script>
 
 <template>
-    <div>
-        <div v-if="show && message" :class="{ 'bg-indigo-500': style == 'success', 'bg-red-700': style == 'danger' }">
-            <div class="max-w-screen-xl mx-auto py-2 px-3 sm:px-6 lg:px-8">
+    <div v-if="show && message">
+        <div :class="{ 'bg-light-500': style == 'success', 'bg-red-700': style == 'danger' }">
+            <div class="mx-auto py-2 px-3 sm:px-6 lg:px-8">
                 <div class="flex items-center justify-between flex-wrap">
                     <div class="w-0 flex-1 flex items-center min-w-0">
                         <span class="flex p-2 rounded-lg"
-                            :class="{ 'bg-indigo-600': style == 'success', 'bg-red-600': style == 'danger' }">
+                            :class="{ 'bg-light-500': style == 'success', 'bg-red-600': style == 'danger' }">
                             <MegaphoneIcon v-if="style == 'danger'" class="h-5 w-5 text-white" aria-hidden="true" />
                             <SunIcon v-if="style == 'success'" class="h-5 w-5 text-white" aria-hidden="true" />
                         </span>
@@ -35,7 +36,7 @@ const accept = () => {
 
                     <div class="shrink-0 sm:ml-3">
                         <button type="button" class="-mr-1 flex p-2 rounded-md focus:outline-none sm:-mr-2 transition"
-                            :class="{ 'hover:bg-indigo-600 focus:bg-indigo-600': style == 'success', 'hover:bg-red-600 focus:bg-red-600': style == 'danger' }"
+                            :class="{ 'hover:bg-light-500 focus:bg-light-800': style == 'success', 'hover:bg-red-600 focus:bg-red-600': style == 'danger' }"
                             aria-label="Dismiss" @click.prevent="accept">
                             <XMarkIcon class="h-5 w-5 text-white" fill="none" />
                         </button>

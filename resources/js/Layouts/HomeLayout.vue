@@ -38,15 +38,14 @@ onMounted(() => {
 <template>
 
     <Head :title="title" />
-
     <Banner />
-
-
 
     <div class="bg-black isolate font-sans">
 
+
         <NavbarMobile />
         <!-- MAIN LG -->
+
         <div class="flex">
 
             <div class="w-2/5 text-white pl-32 py-4 h-screen sticky top-0 hidden lg:block overflow-hidden">
@@ -59,7 +58,7 @@ onMounted(() => {
             </div>
 
 
-            <div class="w-2/5 h-12 hidden xl:block">
+            <div class="w-2/5 hidden xl:block h-auto ">
                 <RightSidebar />
             </div>
 
