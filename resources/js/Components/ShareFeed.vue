@@ -1,9 +1,117 @@
 <script setup>
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 import { PlusIcon } from '@heroicons/vue/24/outline'
+import { ref, computed, reactive, onMounted } from 'vue'
+import { useForm } from '@inertiajs/vue3';
+import videojs from 'video.js';
+import 'video.js/dist/video-js.css';
+
 const props = defineProps({
 
 })
+
+const photoInput = ref(null)
+const videoInput = ref(null)
+const photoPreview = ref(null);
+const showPhotoPreview = ref(false);
+
+const videoPreview = ref(null);
+const showVideoPreview = ref(false);
+let player = false;
+
+const photoDialog = (event) => {
+    photoInput.value.click();
+}
+
+const videoDialog = (event) => {
+    videoInput.value.click();
+}
+
+const handleAddPhoto = (event) => {
+
+    const photo = photoInput.value.files[0];
+
+    if (!photo) return;
+
+    if (showVideoPreview.value === true) {
+        showVideoPreview.value = false;
+        player.pause();
+        videoInput.value.value = null;
+    }
+
+    const reader = new FileReader();
+
+    reader.onload = (e) => {
+        photoPreview.value = e.target.result;
+    };
+
+    reader.readAsDataURL(photo);
+
+    showPhotoPreview.value = true;
+}
+
+const handleAddVideo = (event) => {
+
+    const video = videoInput.value.files[0];
+
+    if (!video) return;
+
+    if (showPhotoPreview.value === true) {
+        showPhotoPreview.value = false;
+        photoInput.value.value = null;
+    }
+
+    const fileType = video.type;
+
+    const reader = new FileReader();
+
+    reader.readAsArrayBuffer(video);
+
+    reader.onload = (e) => {
+
+        // The file reader gives us an ArrayBuffer:
+        let buffer = e.target.result;
+
+        // We have to convert the buffer to a blob:
+        let videoBlob = new Blob([new Uint8Array(buffer)], { type: 'video/mp4' });
+
+        // The blob gives us a URL to the video file:
+        let url = window.URL.createObjectURL(videoBlob);
+
+        player = videojs(videoPreview.value, { controls: true, fill: true, autoplay: true, aspectRatio: '4:3' });
+
+        player.src({ src: url, type: fileType });
+
+        showVideoPreview.value = true;
+
+    };
+
+
+}
+
+const storePostForm = useForm({
+    content: '',
+    photo: '',
+    video: '',
+});
+
+
+const handleFormSubmit = async () => {
+    if (photoInput.value) {
+        storePostForm.photo = photoInput.value.files[0];
+    }
+
+    if (videoInput.value) {
+        storePostForm.video = videoInput.value.files[0];
+    }
+
+
+
+    storePostForm.post(route('posts.store'), {
+        preserveScroll: true,
+        onSuccess: () => storePostForm.reset(),
+    });
+}
 </script>
 
 <template>
@@ -21,9 +129,9 @@ const props = defineProps({
         <div class="w-64 p-2">
 
             <div class="flex items-center">
-                <div class=" text-center px-2 m-2">
+                <div class=" text-center m-2">
                     <a href="#"
-                        class="mt-1 group flex items-center text-light-400 px-2 py-2 text-base leading-6 font-medium rounded-full hover:bg-light-800 hover:text-light-300">
+                        class="mt-1 group flex items-center text-white px-2 py-2 text-base leading-6 font-medium rounded-full hover:bg-gray-900 hover:text-gray-300 transition-all">
                         <svg class="text-center h-6 w-6" fill="none" stroke-linecap="round" stroke-linejoin="round"
                             stroke-width="2" stroke="currentColor" viewBox="0 0 24 24">
                             <path
@@ -33,9 +141,9 @@ const props = defineProps({
                     </a>
                 </div>
 
-                <div class=" text-center px-2 m-2">
+                <div class=" text-center  m-2">
                     <a href="#"
-                        class="mt-1 group flex items-center text-light-400 px-2 py-2 text-base leading-6 font-medium rounded-full hover:bg-light-800 hover:text-light-300">
+                        class="mt-1 group flex items-center text-white px-2 py-2 text-base leading-6 font-medium rounded-full hover:bg-gray-900 hover:text-gray-300 transition-all">
                         <svg class="text-center h-6 w-6" fill="none" stroke-linecap="round" stroke-linejoin="round"
                             stroke-width="2" stroke="currentColor" viewBox="0 0 24 24">
                             <path
@@ -46,9 +154,9 @@ const props = defineProps({
                     </a>
                 </div>
 
-                <div class=" text-center px-2 m-2">
+                <div class=" text-center m-2">
                     <a href="#"
-                        class="mt-1 group flex items-center text-light-400 px-2 py-2 text-base leading-6 font-medium rounded-full hover:bg-light-800 hover:text-light-300">
+                        class="mt-1 group flex items-center text-white px-2 py-2 text-base leading-6 font-medium rounded-full hover:bg-gray-900 hover:text-gray-300 transition-all">
                         <svg class="text-center h-6 w-6" fill="none" stroke-linecap="round" stroke-linejoin="round"
                             stroke-width="2" stroke="currentColor" viewBox="0 0 24 24">
                             <path
@@ -65,9 +173,6 @@ const props = defineProps({
 
         <div class="flex-1">
             <PrimaryButton class="float-right mr-8 w-32">
-                <span class="absolute left-2 top-1/2 translate-y-1/2">
-                    <PlusIcon />
-                </span>
                 <span>Post</span>
             </PrimaryButton>
         </div>

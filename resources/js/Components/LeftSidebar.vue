@@ -93,13 +93,13 @@ import { PlusIcon } from '@heroicons/vue/24/outline'
         </SidebarLink>
 
 
-        <PrimaryButton class="flex items-center px-2 py-2 w-48 text-xl hover:bg-gray-900 mb-3">
+        <PrimaryButton class="flex items-center px-2 py-2 w-48 hover:bg-gray-900 mb-3">
             <PlusIcon class="mr-4 h-8 w-8" />
-            <span>New Post</span>
+            <span class="font-light">NEW POST</span>
         </PrimaryButton>
     </nav>
 
-    <div class="flex-shrink-0 flex hover:bg-gray-900 rounded-full p-4 mt-12 mr-2">
+    <div class="flex-shrink-0 flex hover:bg-gray-900 rounded-full p-4 mt-12 mr-2 transition-all">
         <SidebarAvatar />
     </div>
 
