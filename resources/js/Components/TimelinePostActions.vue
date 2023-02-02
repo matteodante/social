@@ -12,7 +12,7 @@ const { name, username, date } = defineProps({
 
             <div class="text-center m-2">
                 <a href="#"
-                    class="mt-1 group flex items-center text-gray-500 px-3 py-2 text-base leading-6 font-medium rounded-full hover:bg-gray-900 hover:text-gray-300">
+                    class="mt-1 group flex items-center text-gray-500 px-3 py-2 text-base leading-6 font-medium rounded-full hover:text-gray-300">
                     <svg class="text-center h-7 w-6" fill="none" stroke-linecap="round" stroke-linejoin="round"
                         stroke-width="2" stroke="currentColor" viewBox="0 0 24 24">
                         <path
@@ -25,7 +25,7 @@ const { name, username, date } = defineProps({
 
             <div class="text-center m-2">
                 <a href="#"
-                    class="mt-1 group flex items-center text-gray-500 px-3 py-2 text-base leading-6 font-medium rounded-full hover:bg-gray-900 hover:text-gray-300">
+                    class="mt-1 group flex items-center text-gray-500 px-3 py-2 text-base leading-6 font-medium rounded-full hover:text-gray-300">
                     <svg class="text-center h-6 w-6" fill="none" stroke-linecap="round" stroke-linejoin="round"
                         stroke-width="2" stroke="currentColor" viewBox="0 0 24 24">
                         <path
@@ -41,7 +41,7 @@ const { name, username, date } = defineProps({
         <div class="flex items-end">
             <div class="text-center m-2">
                 <a href="#"
-                    class="mt-1 group flex items-center text-gray-500 px-3 py-2 text-base leading-6 font-medium rounded-full hover:bg-gray-900 hover:text-gray-300">
+                    class="mt-1 group flex items-center text-gray-500 px-3 py-2 text-base leading-6 font-medium rounded-full hover:text-gray-300">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                         stroke="currentColor" class="w-6 h-6">
                         <path stroke-linecap="round" stroke-linejoin="round"

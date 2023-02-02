@@ -23,8 +23,17 @@ import TimelinePost from '@/Components/TimelinePost.vue';
         <hr class="border-gray-600">
 
         <TimelinePost />
+
+        <hr class="border-gray-600">
+
         <TimelinePost />
+
+        <hr class="border-gray-600">
+
         <TimelinePost />
+
+        <hr class="border-gray-600">
+
         <TimelinePost />
 
 

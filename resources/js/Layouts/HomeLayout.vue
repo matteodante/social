@@ -12,6 +12,7 @@ defineProps({
     title: String,
 });
 
+
 const showingNavigationDropdown = ref(false);
 
 const logout = () => {
@@ -31,6 +32,7 @@ onMounted(() => {
     initPopovers();
     initTabs();
     initTooltips();
+
 });
 </script>
 
@@ -52,10 +54,16 @@ onMounted(() => {
                 <LeftSidebar />
             </div>
 
-            <div class="w-screen lg:w-3/5 border border-gray-600 h-auto border-t-0 ">
+            <Transition name="page" mode="out-in" appear>
+                <main :key="$page.url" class="w-screen lg:w-3/5 border border-gray-600 h-auto border-t-0 ">
+                    <slot />
+                </main>
+            </Transition>
+
+            <!--             <div class="w-screen lg:w-3/5 border border-gray-600 h-auto border-t-0 ">
                 <slot />
 
-            </div>
+            </div> -->
 
 
             <div class="w-2/5 hidden xl:block h-auto ">
@@ -67,3 +75,17 @@ onMounted(() => {
         </div>
     </div>
 </template>
+
+
+
+<style>
+.page-enter-active,
+.page-leave-active {
+    transition: all .1s;
+}
+
+.page-enter,
+.page-leave-active {
+    opacity: 0;
+}
+</style>

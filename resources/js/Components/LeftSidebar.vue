@@ -2,7 +2,7 @@
 
 <script setup>
 import { Link } from '@inertiajs/vue3';
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import PrimaryButton from '@/Components/PrimaryButton.vue';
 import SidebarLink from '@/Components/SidebarLink.vue';
 import SidebarAvatar from '@/Components/SidebarAvatar.vue';
