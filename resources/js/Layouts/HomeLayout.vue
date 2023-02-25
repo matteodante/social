@@ -6,10 +6,13 @@ import Banner from "@/Components/Banner.vue";
 import LeftSidebar from "@/Components/LeftSidebar.vue";
 import RightSidebar from "@/Components/RightSidebar.vue";
 import NavbarMobile from "@/Components/NavbarMobile.vue";
+import { TransitionRoot } from '@headlessui/vue'
 
 defineProps({
     title: String,
 });
+
+const isShowing = ref(true)
 
 
 const showingNavigationDropdown = ref(false);

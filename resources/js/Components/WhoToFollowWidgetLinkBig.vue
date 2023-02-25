@@ -1,17 +1,19 @@
 <script setup>
 import { Link } from '@inertiajs/vue3'
-const { name, username, pic } = defineProps({
+const { name, username, pic, hover } = defineProps({
     name: String,
     username: String,
     pic: String,
-    bigPic: { type: String, required: false }
+    bigPic: { type: String, required: false },
+    hover: { type: Boolean, required: false, default: false },
 })
 
 
 </script>
 
 <template>
-    <div class="block relative rounded-lg flex-shrink-0 antialiased px-5 py-2">
+    <div class="block relative rounded-lg flex-shrink-0 antialiased px-5 py-2"
+        :class="hover ? 'hover:bg-gray-800 hover:scale-105' : ''">
 
         <div class="h-28 p-4 w-auto relative block rounded-lg overflow-hidden">
             <Link :href="route('dashboard')">
@@ -20,8 +22,7 @@ const { name, username, pic } = defineProps({
                     class="h-full w-full object-cover object-center rounder-lg hover:scale-105 transition-all">
             </div>
             <div class="flex flex-wrap absolute left-0 right-0 bottom-0 pl-32 pr-3 pb-2 pt-2 bg-opacity-20 bg-black">
-                <div
-                    class="block rounded-full border-4 absolute left-6 bottom-4 shadow-2xl hover:scale-110 transition-all">
+                <div class="block rounded-full border-4 absolute left-6 bottom-4 shadow-2xl hover:scale-110 transition-all">
                     <span class="w-full h-full">
                         <div class="">
                             <img :src="pic" class="block object-cover relative h-20 w-20 rounded-full">
@@ -45,9 +46,6 @@ const { name, username, pic } = defineProps({
         </div>
 
     </div>
-
-
-
 </template>
 
 

@@ -15,7 +15,7 @@ import WhoToFollowWidget from '@/Components/WhoToFollowWidget.vue';
 
 
     <div class="max-w-sm rounded-lg  bg-gray-900 overflow-hidden shadow-lg m-4 mr-20">
-        <WhoToFollowWidget />
+        <WhoToFollowWidget :hover="true" />
     </div>
 
 
@@ -36,5 +36,4 @@ import WhoToFollowWidget from '@/Components/WhoToFollowWidget.vue';
             <p class="text-sm leading-6 font-medium text-gray-600"> © 2020 Twitter, Inc.</p>
         </div>
     </div>
-
 </template>
