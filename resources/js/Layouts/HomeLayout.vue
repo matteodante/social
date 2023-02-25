@@ -2,7 +2,6 @@
 import { ref, onMounted } from "vue";
 import { Head, Link, router } from "@inertiajs/vue3";
 import Banner from "@/Components/Banner.vue";
-import { initAccordions, initCarousels, initCollapses, initDials, initDismisses, initDrawers, initDropdowns, initModals, initPopovers, initTabs, initTooltips, } from "flowbite";
 //import { HomeIcon, HashtagIcon, BellIcon, ChatBubbleOvalLeftIcon, UserIcon, ArrowRightOnRectangleIcon, RocketLaunchIcon } from '@heroicons/vue/24/outline'
 import LeftSidebar from "@/Components/LeftSidebar.vue";
 import RightSidebar from "@/Components/RightSidebar.vue";
@@ -21,24 +20,12 @@ const logout = () => {
 
 //flowbite
 onMounted(() => {
-    initAccordions();
-    initCarousels();
-    initCollapses();
-    initDials();
-    initDismisses();
-    initDrawers();
-    initDropdowns();
-    initModals();
-    initPopovers();
-    initTabs();
-    initTooltips();
-
+    console.log('Layout mounted');
 });
 </script>
 
 
 <template>
-
     <Head :title="title" />
     <Banner />
 
@@ -60,11 +47,6 @@ onMounted(() => {
                 </main>
             </Transition>
 
-            <!--             <div class="w-screen lg:w-3/5 border border-gray-600 h-auto border-t-0 ">
-                <slot />
-
-            </div> -->
-
 
             <div class="w-2/5 hidden xl:block h-auto ">
                 <RightSidebar />
@@ -81,11 +63,11 @@ onMounted(() => {
 <style>
 .page-enter-active,
 .page-leave-active {
-    transition: all .1s;
+    transition: opacity 0.1s ease;
 }
 
 .page-enter,
-.page-leave-active {
+.page-leave-to {
     opacity: 0;
 }
 </style>

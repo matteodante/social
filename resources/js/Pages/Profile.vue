@@ -12,35 +12,34 @@ import ProfileInfo from '@/Components/ProfileInfo.vue';
 import ProfileAvatar from '@/Components/ProfileAvatar.vue';
 </script>
 
+<script>
+export default {
+    layout: (h, page) => h(HomeLayout, { title: 'Profile' }, () => page)
+}
+</script>
+
 <template>
-    <HomeLayout title="Profile">
-
-
-        <div>
-            <ProfileCover />
-            <div class="p-4">
-                <div class="relative flex w-full">
-                    <!-- Avatar -->
-                    <ProfileAvatar />
-                    <!-- Follow Button -->
-                    <div class="flex flex-col text-right">
-                        <PrimaryButton
-                            class=" mt-0 max-h-max whitespace-nowrap focus:outline-none  focus:ring max-w-max border bg-transparent">
-                            Follow
-                        </PrimaryButton>
-                    </div>
+    <div>
+        <ProfileCover />
+        <div class="p-4">
+            <div class="relative flex w-full">
+                <!-- Avatar -->
+                <ProfileAvatar />
+                <!-- Follow Button -->
+                <div class="flex flex-col text-right">
+                    <PrimaryButton
+                        class=" mt-0 max-h-max whitespace-nowrap focus:outline-none  focus:ring max-w-max border bg-transparent">
+                        Follow
+                    </PrimaryButton>
                 </div>
-
-                <!-- Profile info -->
-                <ProfileInfo />
             </div>
-            <hr class="border-gray-800">
-            <TimelinePost />
-            <TimelinePost />
-            <TimelinePost />
+
+            <!-- Profile info -->
+            <ProfileInfo />
         </div>
-
-
-
-    </HomeLayout>
+        <hr class="border-gray-800">
+        <TimelinePost />
+        <TimelinePost />
+        <TimelinePost />
+    </div>
 </template>

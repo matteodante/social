@@ -1,4 +1,5 @@
 <script setup>
+
 import AppLayout from '@/Layouts/AppLayout.vue';
 import Timeline from '@/Components/Timeline.vue';
 import HomeLayout from '@/Layouts/HomeLayout.vue';
@@ -7,35 +8,37 @@ import { PlusIcon } from '@heroicons/vue/24/outline'
 import TitleFeed from '@/Components/TitleFeed.vue';
 import ShareFeed from '@/Components/ShareFeed.vue';
 import TimelinePost from '@/Components/TimelinePost.vue';
+
+</script>
+
+<script>
+
+export default {
+    layout: (h, page) => h(HomeLayout, { title: 'Dashboard' }, () => page)
+}
+
 </script>
 
 <template>
-    <HomeLayout title="Dashboard">
+    <TitleFeed title="Home" />
 
+    <hr class="border-gray-600">
 
-        <TitleFeed title="Home" />
+    <ShareFeed />
 
+    <hr class="border-gray-600">
 
-        <hr class="border-gray-600">
+    <TimelinePost />
 
-        <ShareFeed />
+    <hr class="border-gray-600">
 
-        <hr class="border-gray-600">
+    <TimelinePost />
 
-        <TimelinePost />
+    <hr class="border-gray-600">
 
-        <hr class="border-gray-600">
+    <TimelinePost />
 
-        <TimelinePost />
+    <hr class="border-gray-600">
 
-        <hr class="border-gray-600">
-
-        <TimelinePost />
-
-        <hr class="border-gray-600">
-
-        <TimelinePost />
-
-
-    </HomeLayout>
+    <TimelinePost />
 </template>
