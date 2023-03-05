@@ -14,7 +14,7 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ["Arimo", "Rubik", "Open Sans", ...defaultTheme.fontFamily.sans],
+                sans: [...defaultTheme.fontFamily.sans],
             },
             colors: {
                 light: {
@@ -24,6 +24,10 @@ module.exports = {
                   500: '#0091EA',
                   800: '#00AFF080',
                 },
+                bondi: '#208AAE',
+                bittersweet: '#F87060',
+                jet: '#2A2B2E',
+                smoky: '#2A2B2E',
             },
         },
     },

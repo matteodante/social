@@ -1,13 +1,6 @@
 <script setup>
 import { ref, onMounted } from "vue";
-import { Head, Link, router } from "@inertiajs/vue3";
-import Banner from "@/Components/Banner.vue";
-//import { HomeIcon, HashtagIcon, BellIcon, ChatBubbleOvalLeftIcon, UserIcon, ArrowRightOnRectangleIcon, RocketLaunchIcon } from '@heroicons/vue/24/outline'
-import LeftSidebar from "@/Components/LeftSidebar.vue";
-import RightSidebar from "@/Components/RightSidebar.vue";
-import NavbarMobile from "@/Components/NavbarMobile.vue";
-import { TransitionRoot } from '@headlessui/vue'
-
+import { Head, router } from "@inertiajs/vue3";
 defineProps({
     title: String,
 });
@@ -32,7 +25,7 @@ onMounted(() => {
     <Head :title="title" />
     <Banner />
 
-    <div class="bg-black isolate font-sans">
+    <div class="bg-white isolate font-sans">
 
 
         <NavbarMobile />
@@ -40,7 +33,7 @@ onMounted(() => {
 
         <div class="flex">
 
-            <div class="w-2/5 text-white pl-32 py-4 h-screen sticky top-0 hidden lg:block overflow-hidden">
+            <div class="w-2/5 pl-32 py-4 h-screen sticky top-0 hidden lg:block overflow-hidden">
                 <LeftSidebar />
             </div>
 

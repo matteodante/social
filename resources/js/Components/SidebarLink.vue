@@ -1,6 +1,7 @@
 <template>
     <Link :href="href"
-        class="group flex items-center px-2 py-2 text-xl leading-6 font-normal rounded-full hover:bg-gray-900 mb-3">
+        class="group flex items-center mb-3 px-2 py-2 text-xl leading-6 font-semibold rounded-full text-smoky hover:text-bittersweet hover:bg-bittersweet hover:bg-opacity-10 transition-all"
+        :class="active ? '' : 'opacity-50'">
     <slot name="icon" />
     {{ text }}
     </Link>
@@ -12,6 +13,7 @@ import { Link } from '@inertiajs/vue3';
 const { href, text } = defineProps({
     href: String,
     text: String,
+    active: { type: Boolean, default: false }
 })
 
 </script>

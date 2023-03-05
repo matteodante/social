@@ -1,25 +1,23 @@
 <script setup>
-import SearchBar from '@/Components/SearchBar.vue';
-import TrendingWidget from '@/Components/TrendingWidget.vue';
-import WhoToFollowWidget from '@/Components/WhoToFollowWidget.vue';
+
 
 </script>
 
 <template>
     <!--right menu-->
 
-    <div class="relative text-white max-w-sm mt-3 ml-4 pb-0 mr-20">
+    <div class="relative max-w-sm mt-3 ml-4 pb-0 mr-20">
         <SearchBar />
     </div>
 
 
 
-    <div class="max-w-sm rounded-lg  bg-gray-900 overflow-hidden shadow-lg m-4 mr-20">
+    <div class="max-w-sm rounded-lg overflow-hidden m-4 mr-20 bg-bittersweet bg-opacity-25">
         <WhoToFollowWidget :hover="true" />
     </div>
 
 
-    <div class="max-w-sm rounded-lg bg-gray-900 border-0  overflow-hidden m-4 mr-20">
+    <div class="max-w-sm rounded-lg border-0 overflow-hidden m-4 mr-20 bg-bittersweet bg-opacity-25">
         <TrendingWidget />
     </div>
 

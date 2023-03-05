@@ -1,7 +1,6 @@
 <script setup>
 import { Link, router } from '@inertiajs/vue3';
 import { ref } from 'vue';
-import TrendingWidgetLink from '@/Components/TrendingWidgetLink.vue'
 
 const trendings = [
     { position: 1, hashtag: 'Mutande', nPosts: 5466 },
@@ -24,11 +23,10 @@ const trendings = [
         :nPosts="trending.nPosts" />
 
     <Link :href="route('dashboard')">
-    <div class="text-center hover:bg-gray-800 transition-all">
+    <div class="text-center transition-all">
         <div class="p-4">
-            <span class="px-4 font-normal text-light-400">Show more</span>
+            <span class="px-4 font-normal text-white hover:text-bittersweet hover:font-bold transition-all">Show more</span>
         </div>
     </div>
     </Link>
-
 </template>

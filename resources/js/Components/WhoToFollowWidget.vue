@@ -1,6 +1,4 @@
 <script setup>
-import WhoToFollowWidgetLink from '@/Components/WhoToFollowWidgetLink.vue';
-import WhoToFollowWidgetLinkBig from '@/Components/WhoToFollowWidgetLinkBig.vue';
 import { Link, router } from '@inertiajs/vue3'
 import { ArrowPathIcon } from '@heroicons/vue/24/outline'
 
@@ -21,7 +19,7 @@ const { hover } = defineProps({
         <div class="flex-1 m-2">
             <h2 class="px-4 py-2 text-xl font-semibold text-white">You might like</h2>
         </div>
-        <button class="px-4 py-2 text-white content-end hover:text-light-100 transition-colors">
+        <button class="px-4 py-2 text-white content-end hover:text-bittersweet transition-colors">
             <ArrowPathIcon class="text-xl w-6 font-semibold" />
         </button>
     </div>
@@ -31,9 +29,9 @@ const { hover } = defineProps({
         :pic="who.pic" :bigPic="who.bigPic" :hover="hover" />
 
     <Link :href="route('dashboard')">
-    <div class="text-center hover:bg-gray-800 transition-all">
+    <div class="text-center transition-all">
         <div class="p-4">
-            <span class="px-4 font-normal text-light-400">Show more</span>
+            <span class="px-4 font-normal text-white hover:text-bittersweet hover:font-bold transition-all">Show more</span>
         </div>
     </div>
     </Link>

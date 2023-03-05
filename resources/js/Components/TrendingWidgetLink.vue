@@ -11,7 +11,7 @@ const { position, hashtag, nPosts } = defineProps({
 
 <template>
     <Link :href="route('dashboard')">
-    <div class="flex hover:bg-gray-800 transition-all">
+    <div class="flex hover:bg-bittersweet hover:bg-opacity-25 transition-all">
         <div class="flex-1">
             <p class="px-4 ml-2 mt-3 w-48 text-xs text-gray-400">{{ position }} Trending</p>
             <h2 class="px-4 ml-2 w-48 font-bold text-white">#{{ hashtag }}</h2>

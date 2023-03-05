@@ -12,7 +12,7 @@ const mobileMenuOpen = ref(false);
 
 <template>
     <!-- NAVBAR MOBILE -->
-    <div class="lg:hidden fixed bottom-0 h-16 w-full flex justify-around text-white  bg-black border border-gray-600 ">
+    <div class="lg:hidden fixed bottom-0 h-16 w-full flex justify-around text-smoky  bg-white border ">
         <a href="#" class="flex items-center justify-center ">
             <svg class="h-6 w-6 " stroke="currentColor" fill="none" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -47,5 +47,4 @@ const mobileMenuOpen = ref(false);
             </svg>
         </a>
     </div>
-
 </template>

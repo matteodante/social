@@ -12,8 +12,7 @@ const { name, username, pic, hover } = defineProps({
 </script>
 
 <template>
-    <div class="block relative rounded-lg flex-shrink-0 antialiased px-5 py-2"
-        :class="hover ? 'hover:bg-gray-800 hover:scale-105' : ''">
+    <div class="block relative rounded-lg flex-shrink-0 antialiased px-5 py-2" :class="hover ? 'hover:scale-105' : ''">
 
         <div class="h-28 p-4 w-auto relative block rounded-lg overflow-hidden">
             <Link :href="route('dashboard')">
@@ -21,7 +20,7 @@ const { name, username, pic, hover } = defineProps({
                 <img :src="bigPic"
                     class="h-full w-full object-cover object-center rounder-lg hover:scale-105 transition-all">
             </div>
-            <div class="flex flex-wrap absolute left-0 right-0 bottom-0 pl-32 pr-3 pb-2 pt-2 bg-opacity-20 bg-black">
+            <div class="flex flex-wrap absolute left-0 right-0 bottom-0 pl-32 pr-3 pb-2 pt-2 bg-smoky bg-opacity-25">
                 <div class="block rounded-full border-4 absolute left-6 bottom-4 shadow-2xl hover:scale-110 transition-all">
                     <span class="w-full h-full">
                         <div class="">
