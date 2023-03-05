@@ -12,12 +12,13 @@
 
 
 
-    <div class="max-w-sm rounded-lg overflow-hidden m-4 mr-20 bg-bittersweet bg-opacity-25">
+    <div class="max-w-sm rounded-lg overflow-hidden m-4 mr-20 bg-white border border-opacity-50 border-smoky">
         <WhoToFollowWidget :hover="true" />
     </div>
 
 
-    <div class="max-w-sm rounded-lg border-0 overflow-hidden m-4 mr-20 bg-bittersweet bg-opacity-25">
+    <div
+        class="max-w-sm rounded-lg overflow-hidden m-4 mr-20 bg-bittersweet bg-opacity-50 border border-opacity-50 border-smoky">
         <TrendingWidget />
     </div>
 

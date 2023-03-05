@@ -14,7 +14,7 @@ const { name, username, pic, hover } = defineProps({
 <template>
     <div class="block relative rounded-lg flex-shrink-0 antialiased px-5 py-2" :class="hover ? 'hover:scale-105' : ''">
 
-        <div class="h-28 p-4 w-auto relative block rounded-lg overflow-hidden">
+        <div class="h-28 p-4 w-auto relative block rounded-lg overflow-hidden shadow-lg">
             <Link :href="route('dashboard')">
             <div class="absolute inset-0">
                 <img :src="bigPic"

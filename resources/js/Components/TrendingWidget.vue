@@ -25,7 +25,8 @@ const trendings = [
     <Link :href="route('dashboard')">
     <div class="text-center transition-all">
         <div class="p-4">
-            <span class="px-4 font-normal text-white hover:text-bittersweet hover:font-bold transition-all">Show more</span>
+            <span class="px-4 font-normal text-smoky opacity-50 hover:text-bittersweet hover:font-bold transition-all">Show
+                more</span>
         </div>
     </div>
     </Link>

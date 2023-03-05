@@ -1,6 +1,6 @@
 <template>
     <form @submit.prevent="submit">
-        <button type="submit" class="absolute ml-4 mt-3 mr-4 text-white">
+        <button type="submit" class="absolute ml-4 mt-3 mr-4 text-smoky">
             <svg class="h-4 w-4 fill-current" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
                 version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 56.966 56.966"
                 style="enable-background:new 0 0 56.966 56.966;" xml:space="preserve" width="512px" height="512px">
@@ -10,7 +10,7 @@
         </button>
 
         <input type="search" name="search" placeholder="Search"
-            class="bg-bittersweet bg-opacity-25 placeholder-white border-0 h-10 px-10 pr-5 w-full rounded-full text-sm focus:ring-white focus:border-white transition-all">
+            class="bg-white placeholder-smoky border border-smoky border-opacity-50 h-10 px-10 pr-5 w-full rounded-full text-sm focus:ring-white focus:border-white transition-all">
     </form>
 </template>
 

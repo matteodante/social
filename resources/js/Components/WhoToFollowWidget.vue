@@ -16,10 +16,10 @@ const { hover } = defineProps({
 
 <template>
     <div class="flex">
-        <div class="flex-1 m-2">
-            <h2 class="px-4 py-2 text-xl font-semibold text-white">You might like</h2>
+        <div class="flex-1 m-2 text-smoky opacity-50">
+            <h2 class="px-4 py-2 text-xl font-semibold">You might like</h2>
         </div>
-        <button class="px-4 py-2 text-white content-end hover:text-bittersweet transition-colors">
+        <button class="px-4 py-2  content-end hover:text-bittersweet transition-colors">
             <ArrowPathIcon class="text-xl w-6 font-semibold" />
         </button>
     </div>
@@ -31,7 +31,8 @@ const { hover } = defineProps({
     <Link :href="route('dashboard')">
     <div class="text-center transition-all">
         <div class="p-4">
-            <span class="px-4 font-normal text-white hover:text-bittersweet hover:font-bold transition-all">Show more</span>
+            <span class="px-4 font-normal text-smoky opacity-50 hover:text-bittersweet hover:font-bold transition-all">Show
+                more</span>
         </div>
     </div>
     </Link>

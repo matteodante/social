@@ -38,7 +38,7 @@ onMounted(() => {
             </div>
 
             <Transition name="page" mode="out-in" appear>
-                <main :key="$page.url" class="w-screen lg:w-3/5 border border-gray-600 h-auto border-t-0 ">
+                <main :key="$page.url" class="w-screen lg:w-3/5 h-auto border-t-0 ">
                     <slot />
                 </main>
             </Transition>
