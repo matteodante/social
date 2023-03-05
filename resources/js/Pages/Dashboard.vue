@@ -1,13 +1,7 @@
 <script setup>
-
 import AppLayout from '@/Layouts/AppLayout.vue';
-import Timeline from '@/Components/Timeline.vue';
 import HomeLayout from '@/Layouts/HomeLayout.vue';
-import PrimaryButton from '@/Components/PrimaryButton.vue';
 import { PlusIcon } from '@heroicons/vue/24/outline'
-import TitleFeed from '@/Components/TitleFeed.vue';
-import ShareFeed from '@/Components/ShareFeed.vue';
-import TimelinePost from '@/Components/TimelinePost.vue';
 
 </script>
 

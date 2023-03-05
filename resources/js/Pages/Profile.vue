@@ -1,11 +1,6 @@
 <script setup>
 import HomeLayout from '@/Layouts/HomeLayout.vue';
-import PrimaryButton from '@/Components/PrimaryButton.vue';
 import { PlusIcon } from '@heroicons/vue/24/outline'
-import ProfileCover from '@/Components/ProfileCover.vue';
-import ProfileInfo from '@/Components/ProfileInfo.vue';
-import ProfileAvatar from '@/Components/ProfileAvatar.vue';
-import ProfilePostOrSelling from '@/Components/ProfilePostOrSelling.vue';
 </script>
 
 <script>
