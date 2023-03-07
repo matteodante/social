@@ -16,23 +16,13 @@ export default {
 <template>
     <TitleFeed title="Home" />
 
-    <hr class="border-gray-600">
-
     <ShareFeed />
 
-    <hr class="border-gray-600">
+    <TimelinePost />
 
     <TimelinePost />
 
-    <hr class="border-gray-600">
-
     <TimelinePost />
-
-    <hr class="border-gray-600">
-
-    <TimelinePost />
-
-    <hr class="border-gray-600">
 
     <TimelinePost />
 </template>

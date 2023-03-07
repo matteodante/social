@@ -14,7 +14,7 @@ import { PlusIcon } from '@heroicons/vue/24/outline'
     </div>
 
     <!--left menu-->
-    <nav class="px-2">
+    <nav class="pl-4 pr-2">
 
 
 
@@ -90,7 +90,7 @@ import { PlusIcon } from '@heroicons/vue/24/outline'
 
         <PrimaryButton class="flex items-center px-2 py-2 w-48 mb-3">
             <PlusIcon class="mr-4 h-8 w-8" />
-            <span class="font-light">NEW POST</span>
+            <span>New Post</span>
         </PrimaryButton>
     </nav>
 </template>

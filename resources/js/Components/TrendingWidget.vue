@@ -15,7 +15,7 @@ const trendings = [
 <template>
     <div class="flex">
         <div class="flex-1 m-2">
-            <h2 class="px-4 py-2 text-xl w-48 font-semibold text-white">Trends</h2>
+            <h2 class="px-4 py-2 text-xl w-48 font-semibold text-white">What's hot</h2>
         </div>
     </div>
 
@@ -25,8 +25,8 @@ const trendings = [
     <Link :href="route('dashboard')">
     <div class="text-center transition-all">
         <div class="p-4">
-            <span class="px-4 font-normal text-smoky opacity-50 hover:text-bittersweet hover:font-bold transition-all">Show
-                more</span>
+            <span class="px-4 font-normal text-smoky opacity-50 hover:text-jet hover:font-bold transition-all">
+                Show more</span>
         </div>
     </div>
     </Link>

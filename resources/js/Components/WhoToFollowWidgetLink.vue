@@ -17,11 +17,10 @@ const { name, username, pic } = defineProps({
                     </Link>
                 </div>
                 <div class="ml-3 mt-3">
-                    <p class="text-base leading-6 font-medium text-white">
+                    <p class="text-base leading-6 font-medium ">
                         {{ name }}
                     </p>
-                    <p
-                        class="text-sm leading-5 font-medium text-gray-400 group-hover:text-gray-300 transition ease-in-out duration-150">
+                    <p class="text-sm leading-5 font-medium  group-hover:text-gray-300 transition ease-in-out duration-150">
                         @{{ username }}
                     </p>
                 </div>
@@ -30,13 +29,11 @@ const { name, username, pic } = defineProps({
         <div class="flex-1 px-4 py-2 m-2">
             <a href="" class=" float-right">
                 <button
-                    class="bg-transparent hover:bg-light-500 text-white font-semibold hover:text-white py-2 px-4 border border-white hover:border-transparent rounded-full">
+                    class="bg-transparent hover:bg-light-500  font-semibold py-2 px-4 border border-white hover:border-transparent rounded-full">
                     Follow
                 </button>
             </a>
 
         </div>
     </div>
-
-
 </template>

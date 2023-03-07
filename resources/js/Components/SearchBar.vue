@@ -10,7 +10,7 @@
         </button>
 
         <input type="search" name="search" placeholder="Search"
-            class="bg-white placeholder-smoky border border-smoky border-opacity-50 h-10 px-10 pr-5 w-full rounded-full text-sm focus:ring-white focus:border-white transition-all">
+            class="bg-white placeholder-smoky h-10 px-10 pr-5 w-full rounded-full text-sm focus:ring-white focus:border-white transition-all border border-opacity-25 border-smoky">
     </form>
 </template>
 

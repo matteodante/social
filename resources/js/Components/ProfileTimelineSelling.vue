@@ -4,6 +4,6 @@ import WhoToFollowWidget from '@/Components/WhoToFollowWidget.vue';
 
 <template>
     <div>
-        <WhoToFollowWidget :hover="false" />
+
     </div>
 </template>

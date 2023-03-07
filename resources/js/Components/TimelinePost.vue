@@ -1,16 +1,12 @@
 <script setup>
-import TimelinePostAvatar from '@/Components/TimelinePostAvatar.vue';
-import TimelinePostActions from '@/Components/TimelinePostActions.vue';
-import TimelinePostContent from '@/Components/TimelinePostContent.vue';
-
 </script>
 <template>
-    <div class="hover:bg-gray-900 transition-all">
+    <div class="transition-all border-arrow">
 
         <TimelinePostAvatar />
 
 
-        <div class="pl-16">
+        <div class="px-4">
 
             <TimelinePostContent />
 
@@ -24,5 +20,4 @@ import TimelinePostContent from '@/Components/TimelinePostContent.vue';
         </div>
 
     </div>
-
 </template>

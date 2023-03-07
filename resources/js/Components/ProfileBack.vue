@@ -9,9 +9,8 @@ const { username, nPosts } = defineProps({
 </script>
 
 <template>
-    <div class="px-4 py-2 mx-2">
-        <Link :href="route('dashboard')"
-            class=" text-2xl font-medium rounded-full text-white float-right hover:bg-gray-900">
+    <div class="px-4 py-2 mx-2 text-white">
+        <Link :href="route('dashboard')" class=" text-2xl font-medium rounded-full float-right hover:bg-gray-900">
         <svg class="m-2 h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
             <g>
                 <path
@@ -21,8 +20,8 @@ const { username, nPosts } = defineProps({
         </svg>
         </Link>
     </div>
-    <div class="m-2">
-        <h2 class="mb-0 text-xl font-bold text-white">matteodante98</h2>
-        <p class="mb-0 w-48 text-xs text-gray-400">9,416 Tweets</p>
+    <div class="m-2 text-white">
+        <h2 class="mb-0 text-xl font-bold ">matteodante98</h2>
+        <p class="mb-0 w-48 text-xs ">9,416 Tweets</p>
     </div>
 </template>

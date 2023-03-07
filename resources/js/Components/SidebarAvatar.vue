@@ -2,7 +2,7 @@
     <Link :href="route('profile.show')" class="flex-shrink-0 group block ">
     <div class="flex items-center ">
         <div>
-            <img class="inline-block h-10 w-10 rounded-full"
+            <img class="inline-block h-12 w-12 rounded-full"
                 src="https://pbs.twimg.com/profile_images/1121328878142853120/e-rpjoJi_bigger.png" alt="" />
         </div>
         <div class="ml-3">

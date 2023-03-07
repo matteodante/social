@@ -3,36 +3,33 @@ import { Link } from '@inertiajs/vue3'
 const { name, username, date } = defineProps({
     name: String,
     username: String,
-    date: { type: Date, required: false },
+    date: { type: String, required: false },
     img: String,
 })
 </script>
 
 <template>
-    <div class="flex flex-row p-4">
+    <div class="flex flex-row p-4 text-smoky">
         <Link href="/matteodante98" class="flex-1 group block">
         <div class="flex items-center">
             <div>
-                <img class="inline-block h-10 w-10 rounded-full"
+                <img class="inline-block h-12 w-12 rounded-full"
                     src="https://pbs.twimg.com/profile_images/1121328878142853120/e-rpjoJi_bigger.png" alt="" />
             </div>
-            <div class="ml-2">
-                <div>
-                    <p class="text-base leading-6 font-medium text-white">
-                        Sonali Hirave
-                    </p>
-                </div>
-                <div>
-                    <p
-                        class="text-sm leading-5 font-medium text-gray-400 group-hover:text-gray-300 transition ease-in-out duration-150">
-                        @ShonaDesign
-                    </p>
-                </div>
+            <div class="ml-3">
+                <p class="leading-6 font-semibold ">
+                    Sonali Hirave
+                </p>
+                <p class="text-sm leading-5 font-light italic">
+                    @ShonaDesign
+                </p>
             </div>
         </div>
         </Link>
-        <div class="flex-1 group block content-center">
-
+        <div class="flex-1 text-right align-bottom">
+            <p class="leading-6 font-light italic text-xs">
+                18m ago
+            </p>
         </div>
     </div>
 </template>

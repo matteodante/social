@@ -9,7 +9,7 @@ defineProps({
 
 <template>
     <button :type="type"
-        class="bg-bittersweet mt-5 hover:bg-opacity-50 text-white font-bold py-2 px-4 rounded-full active:bg-smoky focus:outline-none focus:border-gray-900 focus:ring focus:ring-gray-300 disabled:opacity-25 transition">
+        class="bg-jet mt-5 hover:bg-opacity-50 font-light uppercase hover:italic hover:text-jet text-white py-2 px-4 rounded-full active:bg-smoky active:text-white focus:outline-none focus:border-gray-900 focus:ring focus:ring-gray-300 disabled:opacity-25 transition ">
         <slot />
     </button>
 </template>

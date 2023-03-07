@@ -1,6 +1,6 @@
 
 <script setup>
-import { ref, shallowRef } from 'vue';
+import { ref, shallowRef, computed } from 'vue';
 import ProfileTimelinePosts from '@/Components/ProfileTimelinePosts.vue';
 import ProfileTimelineSelling from '@/Components/ProfileTimelineSelling.vue';
 
@@ -10,23 +10,29 @@ const view = (which) => {
     whichComponent.value = which;
 }
 
+const activePosts = computed(() => whichComponent.value == ProfileTimelinePosts)
+const activeSelling = computed(() => whichComponent.value == ProfileTimelineSelling)
+
 
 
 </script>
 <template>
     <div id="wrapper">
-        <div id="choice">
+        <div id="choice" class="border-arrow">
             <ul class="flex relative flex-wrap p-0 list-none">
-                <li
-                    class="flex-1 justify-center text-center border-b-2 transition-all border-gray-600 active:border-light-100 hover:border-light-400">
-                    <button @click="view(ProfileTimelinePosts)" class=" leading-6 font-normal m-3">
-                        <span class="text-white">Posts</span>
+                <li @click="view(ProfileTimelinePosts)"
+                    class="flex-1 justify-center text-center transition-all border-b-2 hover:bg-bittersweet hover:bg-opacity-50"
+                    :class="[activePosts ? 'border-bittersweet' : 'border-white']">
+                    <button class=" leading-6 font-normal m-3">
+                        <span class="">Posts</span>
                     </button>
                 </li>
-                <li
-                    class="flex-1 justify-center text-center border-b-2 transition-all border-gray-600 active:border-light-100 hover:border-light-400">
-                    <button @click="view(ProfileTimelineSelling)" class=" leading-6 font-normal m-3">
-                        <span class="text-white">Selling</span>
+                <li @click="view(ProfileTimelineSelling)"
+                    class="flex-1 justify-center text-center transition-all border-b-2 hover:bg-bittersweet hover:bg-opacity-50"
+                    :class="[activeSelling ? 'border-bittersweet' : 'border-white']">
+
+                    <button class=" leading-6 font-normal m-3">
+                        <span class="">Selling</span>
                     </button>
                 </li>
             </ul>

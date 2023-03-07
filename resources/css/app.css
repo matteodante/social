@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+    .border-arrow {
+        @apply border-b border-l border-r border-smoky border-opacity-25;
+    }
+    .border-tot {
+        @apply border border-smoky border-opacity-25;
+    }
+}
