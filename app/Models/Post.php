@@ -5,10 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use App\Models\User;
+use Cog\Contracts\Love\Reactable\Models\Reactable as ReactableInterface;
+use Cog\Laravel\Love\Reactable\Models\Traits\Reactable;
 
-class Post extends Model
+class Post extends Model implements ReactableInterface
 {
     use HasFactory;
+    use Reactable;
 
     protected $fillable = [
         'user_id',
@@ -27,7 +30,17 @@ class Post extends Model
         'is_sensitive',
         'likes_count',
         'retweets_count',
-        'comments_count'
+        'comments_count',
+        'views_count',
+        'shares_count',
+        'tags',
+        'mentions',
+        'hashtags',
+        'published_at',
+        'expire_at',
+        'is_featured',
+        'is_promoted',
+        'score',
     ];
 
     public function user()

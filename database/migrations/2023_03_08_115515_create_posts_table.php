@@ -14,9 +14,8 @@ return new class extends Migration
         Schema::create('posts', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('user_id');
-            $table->unsignedBigInteger('parent_post_id')->nullable();
             $table->text('content', 5000);
-            $table->enum('media_type', ['image', 'video', 'audio', 'document'])->nullable();
+            $table->enum('media_type', ['image', 'video', 'audio', 'sale'])->nullable();
             $table->string('media_url', 2000)->nullable();
             $table->string('media_thumbnail_url', 2000)->nullable();
             $table->decimal('location_lat', 10, 8)->nullable();
@@ -31,9 +30,20 @@ return new class extends Migration
             $table->unsignedInteger('likes_count')->default(0);
             $table->unsignedInteger('retweets_count')->default(0);
             $table->unsignedInteger('comments_count')->default(0);
+            $table->unsignedInteger('views_count')->default(0);
+            $table->unsignedInteger('shares_count')->default(0);
+            $table->text('tags')->nullable();
+            $table->text('mentions')->nullable();
+            $table->text('hashtags')->nullable();
+            $table->timestamp('published_at')->nullable();
+            $table->timestamp('expire_at')->nullable();
+            $table->boolean('is_featured')->default(false);
+            $table->boolean('is_promoted')->default(false);
+            $table->decimal('score', 8, 4)->nullable();
             $table->timestamps();
 
-            $table->index('user_id');
+
+            $table->index('user_id', 'location_name');
             $table->fullText('content');
 
             $table->foreign('user_id')->references('id')->on('users');
