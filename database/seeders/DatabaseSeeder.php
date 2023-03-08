@@ -20,5 +20,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Matteo',
             'email' => 'matteo.dante659@gmail.com',
         ]);
+
+        \App\Models\Post::factory(1000)->create();
     }
 }
