@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 use App\Models\User;
 use Cog\Contracts\Love\Reactable\Models\Reactable as ReactableInterface;
 use Cog\Laravel\Love\Reactable\Models\Traits\Reactable;
+use App\Models\Hashtag;
 
 class Post extends Model implements ReactableInterface
 {
@@ -28,6 +29,8 @@ class Post extends Model implements ReactableInterface
         'is_deleted',
         'is_edited',
         'is_sensitive',
+        'is_featured',
+        'is_promoted',
         'likes_count',
         'retweets_count',
         'comments_count',
@@ -35,16 +38,18 @@ class Post extends Model implements ReactableInterface
         'shares_count',
         'tags',
         'mentions',
-        'hashtags',
         'published_at',
         'expire_at',
-        'is_featured',
-        'is_promoted',
         'score',
     ];
 
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function hashtags()
+    {
+        return $this->belongsToMany(Hashtag::class, 'post_hashtag', 'post_id', 'hashtag_id')->withTimestamps();
     }
 }

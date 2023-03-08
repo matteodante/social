@@ -12,6 +12,7 @@ use Laravel\Sanctum\HasApiTokens;
 use Cog\Contracts\Love\Reacterable\Models\Reacterable as ReacterableInterface;
 use Cog\Laravel\Love\Reactable\Models\Traits\Reactable;
 use Cog\Laravel\Love\Reacterable\Models\Traits\Reacterable;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 
 class User extends Authenticatable implements MustVerifyEmail, ReacterableInterface
 {
@@ -21,8 +22,6 @@ class User extends Authenticatable implements MustVerifyEmail, ReacterableInterf
     use Notifiable;
     use TwoFactorAuthenticatable;
     use Reacterable;
-
-
     /**
      * The attributes that are mass assignable.
      *
@@ -65,4 +64,9 @@ class User extends Authenticatable implements MustVerifyEmail, ReacterableInterf
     protected $appends = [
         'profile_photo_url',
     ];
+
+    public function posts(): HasMany
+    {
+        return $this->hasMany(Post::class);
+    }
 }

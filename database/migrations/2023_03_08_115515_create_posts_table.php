@@ -34,9 +34,8 @@ return new class extends Migration
             $table->unsignedInteger('shares_count')->default(0);
             $table->text('tags')->nullable();
             $table->text('mentions')->nullable();
-            $table->text('hashtags')->nullable();
-            $table->timestamp('published_at')->nullable();
-            $table->timestamp('expire_at')->nullable();
+            $table->dateTime('published_at')->nullable();
+            $table->dateTime('expire_at')->nullable();
             $table->boolean('is_featured')->default(false);
             $table->boolean('is_promoted')->default(false);
             $table->decimal('score', 8, 4)->nullable();

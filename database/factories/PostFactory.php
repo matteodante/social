@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 use Faker\Generator as Faker;
 use App\Models\Post;
 use App\Models\User;
+use App\Models\Hashtag;
 
 /**
  * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Posts>
@@ -44,7 +45,6 @@ class PostFactory extends Factory
             'shares_count' => 0,
             'tags' => $this->faker->words(5, true),
             'mentions' => $this->faker->name(),
-            'hashtags' => $this->faker->words(5, true),
             'published_at' => $this->faker->dateTime(),
             'expire_at' => $this->faker->dateTime(),
             'is_featured' => false,
@@ -53,5 +53,17 @@ class PostFactory extends Factory
             'created_at' => now(),
             'updated_at' => now(),
         ];
+    }
+
+
+    public function configure()
+    {
+        return $this->afterCreating(function (Post $post) {
+            $post->hashtags()->attach(Hashtag::inRandomOrder()->take(rand(0, 3))->get());
+            foreach (User::inRandomOrder()->take(rand(0, 10))->get() as $user) {
+                $facade = $user->viaLoveReacter();
+                $facade->reactTo($post, 'Like');
+            }
+        });
     }
 }

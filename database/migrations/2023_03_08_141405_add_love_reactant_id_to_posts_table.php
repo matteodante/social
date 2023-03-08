@@ -14,6 +14,7 @@ declare(strict_types=1);
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use Illuminate\Support\Facades\Artisan;
 
 return new class extends Migration
 {
@@ -27,6 +28,8 @@ return new class extends Migration
                 ->references('id')
                 ->on('love_reactants');
         });
+
+        Artisan::call('love:reaction-type-add --default');
     }
 
     public function down(): void
