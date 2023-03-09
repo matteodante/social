@@ -17,7 +17,7 @@
     </div>
 
 
-    <div class="max-w-sm rounded-lg overflow-hidden m-4 mr-20 bg-bittersweet bg-opacity-50 border-tot">
+    <div class="max-w-sm rounded-lg overflow-hidden m-4 mr-20 bg-jet bg-opacity-50 border-tot">
         <TrendingWidget />
     </div>
 
