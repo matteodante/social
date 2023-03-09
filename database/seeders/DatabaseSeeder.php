@@ -24,7 +24,7 @@ class DatabaseSeeder extends Seeder
 
         \App\Models\User::factory(10)->create();
 
-        \App\Models\Hashtag::factory(10)->create();
+        \App\Models\Hashtag::factory(1000)->create();
 
         \App\Models\Post::factory(100)->create();
     }
