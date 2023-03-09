@@ -15,9 +15,7 @@ class PostController extends BaseController
      */
     public function index()
     {
-        return Inertia::render('Dashboard', [
-            'posts' => Post::all(),
-        ]);
+        //
     }
 
     /**

@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -17,13 +18,11 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', [HomeController::class, 'index']);
+Route::get('/', [HomeController::class, 'index'])->name('dashboard');
 
-Route::get('/dashboard', [PostController::class, 'index'])->name('dashboard');
+Route::get('/dashboard', [HomeController::class, 'index']);
 
-Route::get('/{username}', function ($username) {
-    return Inertia::render('Profile');
-})->name('profile');
+Route::get('/{username}', [ProfileController::class, 'index'])->name('profile');
 
 Route::middleware([
     'auth:sanctum',

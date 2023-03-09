@@ -27,7 +27,6 @@ return new class extends Migration
             $table->boolean('is_deleted')->default(false);
             $table->boolean('is_edited')->default(false);
             $table->boolean('is_sensitive')->default(false);
-            $table->unsignedInteger('likes_count')->default(0);
             $table->unsignedInteger('retweets_count')->default(0);
             $table->unsignedInteger('comments_count')->default(0);
             $table->unsignedInteger('views_count')->default(0);

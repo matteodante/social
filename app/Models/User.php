@@ -69,4 +69,9 @@ class User extends Authenticatable implements MustVerifyEmail, ReacterableInterf
     {
         return $this->hasMany(Post::class);
     }
+
+    public function shouldRegisterAsLoveReacterOnCreate(): bool
+    {
+        return true;
+    }
 }

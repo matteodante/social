@@ -115,7 +115,7 @@ const handleFormSubmit = async () => {
 </script>
 
 <template>
-    <div class="flex border-arrow border-b-0">
+    <div class="flex border-b border-smoky border-opacity-25">
         <div class="flex-1 px-2 pt-2 mt-2">
 
             <textarea id="message" rows="4"
@@ -126,7 +126,7 @@ const handleFormSubmit = async () => {
         </div>
     </div>
     <!--middle creat tweet below icons-->
-    <div class="flex border-arrow">
+    <div class="flex border-b">
         <div class="w-64 p-2">
 
             <div class="flex items-center">

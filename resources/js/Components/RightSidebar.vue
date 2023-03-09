@@ -23,7 +23,7 @@
 
 
 
-    <div class="m-6 flow-root">
+    <div class="max-w-sm overflow-hidden m-4 mr-20 text-center">
         <div class="flex-1">
             <div v-if="$page.props.jetstream.hasTermsAndPrivacyPolicyFeature" class="mt-4">
                 <a target="_blank" :href="route('terms.show')" class="text-sm leading-6 font-medium text-gray-500">Terms of
@@ -32,7 +32,7 @@
             </div>
         </div>
         <div class="flex-2">
-            <p class="text-sm leading-6 font-medium text-gray-600"> © 2023 Social, Inc.</p>
+            <p class="text-sm leading-6 font-medium text-gray-600"> © 2023 DotG Inc.</p>
         </div>
     </div>
 </template>

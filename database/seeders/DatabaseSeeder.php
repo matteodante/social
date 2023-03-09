@@ -17,6 +17,8 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
 
+        $output = new \Symfony\Component\Console\Output\ConsoleOutput();
+
         \App\Models\User::factory()->create([
             'name' => 'Matteo',
             'email' => 'matteo.dante659@gmail.com',
@@ -24,8 +26,14 @@ class DatabaseSeeder extends Seeder
 
         \App\Models\User::factory(10)->create();
 
-        \App\Models\Hashtag::factory(1000)->create();
+        $output->writeln("<info>Users creati</info>");
 
-        \App\Models\Post::factory(100)->create();
+        \App\Models\Hashtag::factory(100)->create();
+
+        $output->writeln("<info>Hashtag creati</info>");
+
+        \App\Models\Post::factory(1000)->create();
+
+        $output->writeln("<info>Post creati</info>");
     }
 }

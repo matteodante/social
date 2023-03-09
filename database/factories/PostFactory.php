@@ -38,7 +38,6 @@ class PostFactory extends Factory
             'is_deleted' => false,
             'is_edited' => false,
             'is_sensitive' => false,
-            'likes_count' => 0,
             'retweets_count' => 0,
             'comments_count' => 0,
             'views_count' => 0,
@@ -58,6 +57,7 @@ class PostFactory extends Factory
 
     public function configure()
     {
+
         return $this->afterCreating(function (Post $post) {
             $post->hashtags()->attach(Hashtag::inRandomOrder()->take(rand(0, 3))->get());
             foreach (User::inRandomOrder()->take(rand(0, 10))->get() as $user) {

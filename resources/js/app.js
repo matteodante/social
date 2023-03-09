@@ -1,4 +1,5 @@
 import './bootstrap';
+import 'vue-virtual-scroller/dist/vue-virtual-scroller.css'
 import '../css/app.css';
 
 import { createApp, h } from 'vue';

@@ -13,7 +13,7 @@ const mobileMenuOpen = ref(false);
 
 <template>
     <!-- NAVBAR MOBILE -->
-    <div class="lg:hidden fixed bottom-0 h-16 w-full flex justify-around bg-white border ">
+    <div class="lg:hidden fixed bottom-0 h-16 w-full flex justify-around bg-white border z-10">
 
         <Link href="#" class="flex items-center justify-center text-smoky active:text-jet transition-all">
         <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">

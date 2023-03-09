@@ -36,7 +36,7 @@ const ToggleFollow = () => {
             <ProfileInfo />
         </div>
 
-        <ProfilePostOrSelling />
+        <!--<ProfilePostOrSelling />-->
 
 
     </div>

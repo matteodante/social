@@ -31,7 +31,6 @@ class Post extends Model implements ReactableInterface
         'is_sensitive',
         'is_featured',
         'is_promoted',
-        'likes_count',
         'retweets_count',
         'comments_count',
         'views_count',
@@ -51,5 +50,10 @@ class Post extends Model implements ReactableInterface
     public function hashtags()
     {
         return $this->belongsToMany(Hashtag::class, 'post_hashtag', 'post_id', 'hashtag_id')->withTimestamps();
+    }
+
+    public function shouldRegisterAsLoveReactantOnCreate(): bool
+    {
+        return true;
     }
 }
