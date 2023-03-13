@@ -1,10 +1,29 @@
 <script setup>
+import { computed, reactive } from 'vue';
+
 const props = defineProps({
     text: String,
     media: Boolean,
     mediaType: String,
+    mediaThumb: String,
     mediaSrc: String
 })
+
+const videoOptions = computed(() => {
+    return {
+        autoplay: false,
+        controls: true,
+        sources: [
+            {
+                src: props.mediaSrc,
+                type: 'video/mp4'
+            }
+        ],
+        poster: props.mediaThumb,
+    }
+})
+
+
 
 </script>
 
@@ -14,10 +33,11 @@ const props = defineProps({
     </p>
 
     <div v-if="media" class="md:flex-shrink pt-3">
-        <img v-if="mediaType == 'image'" class="rounded-lg w-full h-96 object-cover" :src="mediaSrc" />
+        <img v-if="mediaType == 'image'" class="rounded-lg w-full h-96 object-cover" :src="props.mediaSrc"
+            :poster="props.mediaThumb" />
     </div>
 
     <div v-if="media" class="md:flex-shrink pt-3">
-        <video v-if="mediaType == 'video'" class="rounded-lg w-full h-96 object-cover" :src="mediaSrc" />
+        <TimelinePostVideoPlayer :options="videoOptions"></TimelinePostVideoPlayer>
     </div>
 </template>

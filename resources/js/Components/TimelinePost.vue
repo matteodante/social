@@ -16,7 +16,7 @@ const { post } = defineProps({
         <div class="px-4">
 
             <TimelinePostContent :text="post.content" :media="!!post.media_url" :mediaType="post.media_type"
-                :mediaSrc="post.media_url" />
+                :mediaSrc="post.media_url" :mediaThumb="post.media_thumbnail_url" />
 
 
             <div class="flex">

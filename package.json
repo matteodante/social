@@ -21,13 +21,14 @@
         "prettier-plugin-tailwindcss": "^0.2.2",
         "tailwindcss": "^3.1.0",
         "unplugin-vue-components": "^0.24.0",
-        "video.js": "^7.21.1",
+        "video.js": "^7.21.3",
         "vite": "^4.0.0",
         "vue": "^3.2.31"
     },
     "dependencies": {
         "@headlessui/vue": "^1.7.7",
         "@heroicons/vue": "^2.0.14",
+        "@videojs-player/vue": "^1.0.0",
         "vue-virtual-scroller": "^2.0.0-beta.8"
     }
 }

@@ -17,7 +17,9 @@ class HomeController extends BaseController
     public function index()
     {
         $posts = Post::with('user')
+            ->where('media_type', 'video')
             ->simplePaginate(10);
+
 
         $posts->getCollection()->transform(function ($post) {
             $facade = $post->viaLoveReactant();

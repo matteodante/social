@@ -23,11 +23,19 @@ class PostFactory extends Factory
 
         $user = User::inRandomOrder()->first();
 
+        $random_media_type = $this->faker->randomElement(['image', 'video', 'audio', 'sale']);
+
+        if ($random_media_type == 'video') {
+            $media_url = asset('storage/videos/test.mp4');
+        } else {
+            $media_url = $this->faker->imageUrl();
+        }
+
         return [
             'user_id' => $user->id,
             'content' => $this->faker->realText(300),
-            'media_type' => $this->faker->randomElement(['image', 'video', 'audio', 'sale']),
-            'media_url' => $this->faker->imageUrl(),
+            'media_type' => $random_media_type,
+            'media_url' => $media_url,
             'media_thumbnail_url' => $this->faker->imageUrl(),
             'location_lat' => $this->faker->latitude(),
             'location_lng' => $this->faker->longitude(),
