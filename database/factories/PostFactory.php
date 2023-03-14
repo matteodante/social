@@ -26,7 +26,7 @@ class PostFactory extends Factory
         $random_media_type = $this->faker->randomElement(['image', 'video', 'audio', 'sale']);
 
         if ($random_media_type == 'video') {
-            $media_url = asset('storage/videos/test.mp4');
+            $media_url = '/videos/' . $this->faker->uuid();
         } else {
             $media_url = $this->faker->imageUrl();
         }

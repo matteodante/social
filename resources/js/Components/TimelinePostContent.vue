@@ -9,6 +9,7 @@ const props = defineProps({
     mediaSrc: String
 })
 
+
 const videoOptions = computed(() => {
     return {
         autoplay: false,
@@ -19,11 +20,8 @@ const videoOptions = computed(() => {
                 type: 'video/mp4'
             }
         ],
-        poster: props.mediaThumb,
     }
 })
-
-
 
 </script>
 
@@ -35,9 +33,8 @@ const videoOptions = computed(() => {
     <div v-if="media" class="md:flex-shrink pt-3">
         <img v-if="mediaType == 'image'" class="rounded-lg w-full h-96 object-cover" :src="props.mediaSrc"
             :poster="props.mediaThumb" />
-    </div>
 
-    <div v-if="media" class="md:flex-shrink pt-3">
-        <TimelinePostVideoPlayer :options="videoOptions"></TimelinePostVideoPlayer>
+        <TimelinePostVideoPlayer v-if="mediaType == 'video'" type="video/mp4" class="rounded-lg" :options="videoOptions" />
+
     </div>
 </template>

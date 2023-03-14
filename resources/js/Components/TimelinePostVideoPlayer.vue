@@ -18,13 +18,12 @@ export default {
         }
     },
     mounted() {
-        this.player = videojs(this.$refs.videoPlayer, this.options, () => {
-
-        });
+        this.player = videojs(this.$refs.videoPlayer, this.options);
     },
     beforeDestroy() {
         if (this.player) {
             this.player.dispose();
+            this.player.null
         }
     }
 }
@@ -33,6 +32,6 @@ export default {
 
 <template>
     <div>
-        <video ref="videoPlayer" class="video-js"></video>
+        <video ref="videoPlayer" class="w-full h-96 aspect-video video-js" controls />
     </div>
 </template>

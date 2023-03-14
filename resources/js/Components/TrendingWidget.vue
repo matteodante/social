@@ -1,6 +1,7 @@
 <script setup>
 import { Link, router } from '@inertiajs/vue3';
 import { ref } from 'vue';
+import ShowMoreFeed from './ShowMoreFeed.vue';
 
 const trendings = [
     { position: 1, hashtag: 'Mutande', nPosts: 5466 },
@@ -23,11 +24,6 @@ const trendings = [
         :nPosts="trending.nPosts" />
 
     <Link :href="route('dashboard')">
-    <div class="text-center transition-all">
-        <div class="p-4">
-            <span class="px-4 font-normal text-smoky opacity-50 hover:text-jet hover:font-bold transition-all">
-                Show more</span>
-        </div>
-    </div>
+    <ShowMoreFeed />
     </Link>
 </template>

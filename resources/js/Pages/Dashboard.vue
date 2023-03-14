@@ -32,4 +32,6 @@ export default {
             </DynamicScrollerItem>
         </template>
     </DynamicScroller>
+
+    <ShowMoreFeed />
 </template>

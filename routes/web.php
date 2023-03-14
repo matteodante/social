@@ -6,6 +6,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
+use Iman\Streamer\VideoStreamer;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,15 +19,20 @@ use Inertia\Inertia;
 |
 */
 
-Route::get('/', [HomeController::class, 'index'])->name('dashboard');
-
-Route::get('/dashboard', [HomeController::class, 'index']);
-
-Route::get('/{username}', [ProfileController::class, 'index'])->name('profile');
-
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
+
+    Route::get('/', [HomeController::class, 'index'])->name('dashboard');
+
+    Route::get('/dashboard', [HomeController::class, 'index']);
+
+    Route::get('/{username}', [ProfileController::class, 'index'])->name('profile');
+
+    Route::get('/videos/{id}', function ($id) {
+        $path = public_path('/storage/videos/test.mp4');
+        VideoStreamer::streamFile($path);
+    });
 });

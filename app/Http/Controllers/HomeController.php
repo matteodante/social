@@ -17,7 +17,7 @@ class HomeController extends BaseController
     public function index()
     {
         $posts = Post::with('user')
-            ->where('media_type', 'video')
+            ->inRandomOrder()
             ->simplePaginate(10);
 
 
